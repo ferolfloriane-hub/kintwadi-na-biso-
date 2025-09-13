@@ -1,95 +1,122 @@
-/* Reset léger */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-img { max-width: 100%; height: auto; display: block; }
-
-/* Base */
+/* ---------------------- */
+/* Reset de base          */
+/* ---------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #222;
   line-height: 1.6;
-  color: #111;
-  background: #fafafa;
 }
 
-/* Header */
+/* ---------------------- */
+/* Header & Menu          */
+/* ---------------------- */
 .site-header {
-  padding: 16px;
-  border-bottom: 1px solid #eee;
-  background: #fff;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 .site-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 24px;
+  margin-bottom: 12px;
+  font-size: 28px;
   letter-spacing: 1px;
 }
-.menu {
+.site-header nav ul {
+  list-style: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
 }
-.menu a {
+.site-header nav a {
+  color: #fff;
   text-decoration: none;
-  color: #111;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: #f2f2f2;
+  background: #34495e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
-.menu a:hover { background: #e9e9e9; }
+.site-header nav a:hover {
+  background: #1abc9c;
+}
 
-/* Grille de cartes */
-.grid {
-  padding: 20px;
+/* ---------------------- */
+/* Page d'accueil (cartes)*/
+/* ---------------------- */
+.cards {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;
   background: #fff;
-  border: 1px solid #eee;
-  border-radius: 14px;
-  padding: 14px;
-  transition: transform .15s ease, box-shadow .15s ease;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,.06);
-}
-.card .txt h2 {
-  margin: 0 0 6px 0;
-  font-size: 18px;
-}
-.card .txt p {
-  margin: 0;
-  color: #444;
-  font-size: 14px;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 .card img {
-  border-radius: 10px;
-  border: 1px solid #f0f0f0;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+.card p {
+  color: #555;
+  font-size: 14px;
 }
 
-/* Footer */
-.site-footer {
-  padding: 16px;
-  text-align: center;
-  color: #666;
-}
+/* ---------------------- */
+/* Pages internes         */
+/* ---------------------- */
 .page-content {
-  padding: 20px;
   max-width: 800px;
-  margin: auto;
+  margin: 40px auto;
+  padding: 20px;
   text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .page-content img {
   border-radius: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+.page-content h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #2c3e50;
 }
 .page-content p {
+  color: #444;
   font-size: 16px;
-  color: #333;
+}
+
+/* ---------------------- */
+/* Footer                 */
+/* ---------------------- */
+.site-footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
 }
